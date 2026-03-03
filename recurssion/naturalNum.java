@@ -25,7 +25,7 @@ public class naturalNum{
             System.out.println(sum);
             return;
         }
-        sum =i + sum;
+        sum = i + sum;
         printNatural(i+1, n, sum);
     }
     public static void main(String[] args) {

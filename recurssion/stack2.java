@@ -79,7 +79,32 @@
 
 
 // print x^n(stack height  = n)
-public class stack{
+// public class stack{
+//     public static int calcPower(int x , int n) {
+//         // base condition
+//         if(n == 0 ){
+//             return 1;
+
+//         }
+//         if(x == 0){
+//             return 0;
+//         }
+//         int power1 = calcPower(x, n-1);
+//         int power2 = x * power1;
+//         return power2;
+//     }
+//     public static void main(String[] args) {
+//         int x = 2;
+//         int n = 3;
+//         int values = calcPower(x, n);
+//         System.out.println(values);
+//     }
+// }
+
+
+
+
+public class stack2{
     public static int calcPower(int x , int n) {
         // base condition
         if(n == 0 ){
@@ -89,13 +114,17 @@ public class stack{
         if(x == 0){
             return 0;
         }
-        int power1 = calcPower(x, n-1);
-        int power2 = x * power1;
-        return power2;
+        // if n is even
+        if(n %2 == 0){
+            return calcPower(x, n/2) * calcPower(x, n/2);
+        }
+        else{
+            return calcPower(x, n/2) * calcPower(x, n/2)  * x;
+        }
     }
     public static void main(String[] args) {
         int x = 2;
-        int n = 3;
+        int n = 5;
         int values = calcPower(x, n);
         System.out.println(values);
     }

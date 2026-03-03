@@ -56,20 +56,47 @@
 
 
 // print the fibonacci sequence till nth term
-public class fabonaciseqeunce{
-    public static void fabonacivalues(int a, int b, int n) {
-        if(n == 0){
-            return;
-        }
-        int c = a + b;
-        System.out.println(c);
-        fabonacivalues(b , c, n-1);
+// public class fabonaciseqeunce{
+//     public static void fabonacivalues(int a, int b, int n) {
+//         if(n == 0){
+//             return;
+//         }
+//         int c = a + b;
+//         System.out.println(c);
+//         fabonacivalues(b , c, n-1);
 
+//     }
+//     public static void main(String[] args) {
+//         int a = 0;
+//         int b = 1;
+//         int n = 7;
+//         fabonacivalues(a, b, n-2);
+//     }
+// }
+
+
+
+
+
+// print x^n(stack height  = n)
+public class stack{
+    public static int calcPower(int x , int n) {
+        // base condition
+        if(n == 0 ){
+            return 1;
+
+        }
+        if(x == 0){
+            return 0;
+        }
+        int power1 = calcPower(x, n-1);
+        int power2 = x * power1;
+        return power2;
     }
     public static void main(String[] args) {
-        int a = 0;
-        int b = 1;
-        int n = 7;
-        fabonacivalues(a, b, n-2);
+        int x = 2;
+        int n = 3;
+        int values = calcPower(x, n);
+        System.out.println(values);
     }
 }

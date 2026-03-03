@@ -38,18 +38,38 @@
 
 
 // print factorial of a number n
-public class FactorialNum{
-    public static int calcfactorial(int n) {
-        if(n == 1 || n == 0){
-            return 1;
+// public class FactorialNum{
+//     public static int calcfactorial(int n) {
+//         if(n == 1 || n == 0){
+//             return 1;
+//         }
+//         int fac_n1 = calcfactorial(n-1);
+//         int fac_n2 = n * fac_n1;
+//         return fac_n2;
+//     }
+//     public static void main(String[] args) {
+//         int n = 5;
+//         int value = calcfactorial(n);
+//         System.out.println(value);
+//     }
+// }
+
+
+// print the fibonacci sequence till nth term
+public class fabonaciseqeunce{
+    public static void fabonacivalues(int a, int b, int n) {
+        if(n == 0){
+            return;
         }
-        int fac_n1 = calcfactorial(n-1);
-        int fac_n2 = n * fac_n1;
-        return fac_n2;
+        int c = a + b;
+        System.out.println(c);
+        fabonacivalues(b , c, n-1);
+
     }
     public static void main(String[] args) {
-        int n = 5;
-        int value = calcfactorial(n);
-        System.out.println(value);
+        int a = 0;
+        int b = 1;
+        int n = 7;
+        fabonacivalues(a, b, n-2);
     }
 }

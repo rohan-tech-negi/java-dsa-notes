@@ -110,7 +110,7 @@ public class stack2{
         if(n == 0 ){
             return 1;
 
-        }
+        } 
         if(x == 0){
             return 0;
         }

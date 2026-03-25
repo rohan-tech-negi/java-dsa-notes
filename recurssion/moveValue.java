@@ -22,3 +22,5 @@ public class moveValue {
         MoveAllX(str, 0, 0, "");
     }
 }
+
+// code time complexity is : O(n)
